@@ -143,17 +143,15 @@
         // ÁREA DE DADOS DA COLABORADORA
         // ==========================================
         const colaborador = {
-            nome: "Gabriella Trombeta",
+            nome: "Maria Vitória",
             cargo: "Recepcionista",
-            
-            // E-mail genérico (ajuste se necessário)
-            email: "gabriella.trombeta@exemplo.com.br", 
+            email: "mariavitoria@exemplo.com.br", 
             
             // Link do LinkedIn
-            linkedinPessoal: "https://www.linkedin.com/in/gabriellahilariotrombeta/",
+            linkedinPessoal: "https://www.linkedin.com/in/maria-vit%C3%B3ria-d-77a3833aa/",
             
-            // Foto da Gabriella
-            fotoUrl: "https://media.licdn.com/dms/image/v2/C4E03AQGdfz_lQdHn1Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1572621670436?e=1771459200&v=beta&t=J61BPRMvati-cwUD2D4xmNH0rxtct0HjsgP0X0paCjE", 
+            // FOTO VAZIA (Vai usar ícone padrão)
+            fotoUrl: "", 
             
             // WhatsApp (Mesmo da Raquel)
             whatsapp: "5518997994481", 
@@ -183,6 +181,7 @@
         }
 
         const imgElement = document.getElementById('foto-perfil');
+        // Lógica: Se tiver link, usa a foto. Se não, cria o ícone.
         if (colaborador.fotoUrl && colaborador.fotoUrl.length > 10) {
             imgElement.src = colaborador.fotoUrl;
         } else {
